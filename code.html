@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            background-image: url("mmtim.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 700px;
+        }
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color:  #c9191c;
+            padding: 20px;
+            color: white;
+            border-radius: 0px;
+        }
+
+        .signin {
+            background-color: white;
+            color: #0b0b0b;
+            border: none;
+            padding: 8px 16px; 
+            cursor: pointer;
+            font-size: 14px; 
+            border-radius: 15px;
+        }
+
+        .logo {
+            margin-top: 5px;
+            height: 40px;
+            width: 100px;
+        }
+
+        .navigation {
+            background-color: white;
+            padding: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+        }
+
+        .navigation ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 0;
+    background-color: white;
+}
+
+
+.navigation li {
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Default Icon Style */
+.navigation li i {
+    font-size: 18px;
+    color: #333;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+        
+        .booking-section {
+            background: white;
+            background-image: url("mmt3.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 440px;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            width: 70vw;
+            margin-left: 200px;
+        }
+        .trip-options, .fare-options {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+        }
+
+        .flight-search {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .search-box {
+            background: white;
+            padding: 10px;
+            border-radius: 25px; 
+            text-align: center;
+            width: 50%; 
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+        }
+        
+        .search-btn {
+            display: block;
+            width: 20%;
+            padding: 15px;
+            background-color: #c9191c;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            text-align: center;
+            margin: 40px auto;
+        }
+        .footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header class="top-bar">
+        <button class="signin">Login / Create Account</button>
+        <img class="logo" src="mmt_dt_top_icon.avif" alt="MakeMyTrip Logo" >
+    </header>
+
+    <nav class="navigation">
+        <ul>
+            <li><i class="fa-solid fa-plane-departure"></i> Flights</li>
+            <li><i class="fa-solid fa-hotel"></i> Hotels</li>
+            <li><i class="fa-solid fa-house"></i> Homestays</li>
+            <li><i class="fa-solid fa-umbrella-beach"></i> Holidays</li>
+            <li><i class="fa-solid fa-train"></i> Trains</li>
+            <li><i class="fa-solid fa-bus"></i> Buses</li>
+            <li><i class="fa-solid fa-taxi"></i> Cabs</li>
+            <li><i class="fa-solid fa-dollar-sign"></i> Forex</li>
+        </ul>
+    </nav>
+
+    <section class="booking-section">
+        <div class="trip-options">
+            <label><input type="radio" name="trip" checked> One way</label>
+            <label><input type="radio" name="trip"> Round trip</label>
+            <label><input type="radio" name="trip"> Multi-city</label>
+        </div>
+
+        <div class="flight-search">
+            <div class="search-box">
+                <label>From</label>
+                <h2>Delhi</h2>
+                <p>DEL, Delhi Airport India</p>
+            </div>
+            <div class="search-box">
+                <label>To</label>
+                <h2>Bengaluru</h2>
+                <p>BLR, Bengaluru International Airport</p>
+            </div>
+
+        <div class="search-box" style="padding-top: 40px;">
+            <label><strong>Departure</strong></label><br>
+                       <input type="date" min="2024-09-22" max="2030-12-31">
+                   </div>
+                   <div class="search-box" style="padding-top: 40px;">
+                    <label><strong>Return</strong></label><br>
+                       <input type="date" min="2024-09-22" max="2030-12-31">
+                      
+                   </div>
+               </div>
+       
+
+        <div class="fare-options">
+            <span><strong>Select a fare type:</strong></span>
+            <div class="fare-types">
+                <label><strong><input type="radio" name="fare"> Regular</strong></label>
+                <label><strong><input type="radio" name="fare"> Student</strong></label>
+                <label><strong><input type="radio" name="fare"> Senior Citizen</strong></label>
+                <label><strong><input type="radio" name="fare"> Armed Forces</strong></label>
+                <label><strong><input type="radio" name="fare"> Doctor & Nurses</strong></label>
+            </div>
+        </div>
+        <button class="search-btn">Search</button>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 MakeMyTrip Pvt. Ltd. | Available in: <strong>India, USA, UAE</strong></p>
+    </footer>
+</body>
+</html>
